@@ -33,6 +33,7 @@ const HeroSection = () => {
 
         <div className="flex flex-col sm:flex-row gap-4">
           <Button
+          onClick={ () => window.location.href = "/signIn"}
             size="lg"
             className="group bg-gradient-to-r font-heading from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white shadow-xl hover:shadow-2xl transition-all duration-300 text-base md:text-base"
           >

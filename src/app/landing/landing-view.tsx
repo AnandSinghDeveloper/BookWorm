@@ -10,6 +10,8 @@ import StarSection from "./ui/components/star-section";
 import Navbar from "./ui/components/navbar";
 import FeaturesSection from "./ui/components/features-section";
 import AiFeaturesSection from "./ui/components/ai-features-section";
+import Image from "next/image";
+import SectionImg  from "../../../public/heroImg.png";
 
 const LandingView = () => {
   const [_scrollY, setScrollY] = useState(0);
@@ -50,6 +52,24 @@ const LandingView = () => {
       <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <FeaturesSection />
       </section>
+
+      {/* <section>
+        <div>
+            <div className=" mx-auto  px-6 lg:px-8 max-w-6xl">
+              <div className=" mt-16 sm:mt-24 flow-root ">
+                <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10  lg:-m-4 lg:rounded-2xl lg:p-4">
+                  <Image
+                  
+                  height={500}
+                  src={SectionImg}
+                    alt="product preview"
+                    className=" rounded-md w-fit bg-white p-2 sm:p-8 md:p-20 ring-1 ring-gray-900/10 shadow-2xl"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+      </section> */}
 
       {/* Benefits Section */}
       <section className="relative  z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">

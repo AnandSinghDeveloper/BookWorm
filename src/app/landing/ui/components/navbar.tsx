@@ -52,7 +52,7 @@ import { Menu } from "lucide-react";
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             <NavLinks />
-            <Button className="bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button onClick={ () => window.location.href = "/signIn"} className="bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white shadow-lg hover:shadow-xl transition-all duration-300">
               Get Started
             </Button>
           </div>
