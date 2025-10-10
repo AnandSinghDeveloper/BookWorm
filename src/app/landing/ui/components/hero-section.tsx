@@ -42,7 +42,7 @@ const HeroSection = () => {
           </Button>
         </div>
       </div>
-     <div className="order-1 lg:order-2">
+     <div className="order-2 lg:order-2 ">
       <Image src={coverImg} alt="Hero" width={700} height={700} className="w-full h-auto" />
      </div>
       
