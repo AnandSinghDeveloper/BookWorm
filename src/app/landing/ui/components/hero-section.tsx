@@ -30,7 +30,7 @@ const HeroSection = () => {
           Discover, read, and immerse yourself in millions of books. Your
           personal library, reimagined for the modern reader.
         </p>
-
+ <p> some chansde</p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Button
           onClick={ () => window.location.href = "/signIn"}
