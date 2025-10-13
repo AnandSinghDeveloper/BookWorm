@@ -40,6 +40,19 @@ const HeroSection = () => {
             Start Reading Free
             <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
+
+
+          /////
+
+
+          <Button
+          onClick={ () => window.location.href = "/signIn"}
+            size="lg"
+            className="group bg-gradient-to-r font-heading from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white shadow-xl hover:shadow-2xl transition-all duration-300 text-base md:text-base"
+          >
+            Start Reading Free
+            <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
         </div>
       </div>
      <div className="order-2 lg:order-2 ">
