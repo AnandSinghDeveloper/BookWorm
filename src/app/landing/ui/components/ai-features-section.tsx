@@ -48,6 +48,9 @@ const AiFeaturesSection = () => {
               setOpenAiFeature(openAiFeature === idx ? null : idx)
             }
           >
+
+            console.log("dwjvefhvb");
+            
             <Card
               className={`border-2 transition-all duration-300 ${
                 openAiFeature === idx
