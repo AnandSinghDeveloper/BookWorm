@@ -49,7 +49,7 @@ const AiFeaturesSection = () => {
             }
           >
 
-            console.log("dwjvefhvb");
+            
             
             <Card
               className={`border-2 transition-all duration-300 ${
