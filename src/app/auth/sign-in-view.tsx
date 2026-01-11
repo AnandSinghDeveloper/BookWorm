@@ -64,6 +64,7 @@ const SignInView = () => {
 
         <div className="flex flex-col space-y-4">
           <button
+          onClick={() => signIn("github", { callbackUrl: "/home" })}
             className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
             type="submit"
           >
@@ -74,7 +75,7 @@ const SignInView = () => {
             <BottomGradient />
           </button>
           <button
-          onClick={() => signIn("github", { callbackUrl: "/home" })}
+          
             className="group/btn shadow-input relative flex h-10 w-full items-center justify-start space-x-2 rounded-md bg-gray-50 px-4 font-medium text-black dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_#262626]"
             type="submit"
           >
