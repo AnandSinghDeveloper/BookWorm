@@ -1,11 +1,11 @@
 // app/api/auth/[...nextauth]/route.js
-import NextAuth from "next-auth";
-import GoogleProvider from "next-auth/providers/google";
-import GitHubProvider from "next-auth/providers/github";
-import { connectDB } from "../../../lib/db";
-import User from "../../../lib/models/user";
+import NextAuth from "next-auth"
+import GoogleProvider from "next-auth/providers/google"
+import GitHubProvider from "next-auth/providers/github"
+import { connectDB } from "@/app/lib/db"
+import User from "@/app/lib/models/user"
 
-const handler = NextAuth({
+export const authOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
@@ -19,9 +19,11 @@ const handler = NextAuth({
 
   callbacks: {
     async signIn({ user, account }) {
-      await connectDB();
+      if (!user?.email) return false
 
-      const existingUser = await User.findOne({ email: user.email });
+      await connectDB()
+
+      const existingUser = await User.findOne({ email: user.email })
 
       if (!existingUser) {
         await User.create({
@@ -29,12 +31,13 @@ const handler = NextAuth({
           email: user.email,
           image: user.image,
           provider: account.provider,
-        });
+        })
       }
 
-      return true;
+      return true
     },
   },
-});
+}
 
-export { handler as GET, handler as POST };
+const handler = NextAuth(authOptions)
+export { handler as GET, handler as POST }

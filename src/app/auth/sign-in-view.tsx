@@ -7,8 +7,17 @@ import { IconBrandGithub, IconBrandGoogle } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import {signIn } from "next-auth/react"
+import { getServerSession } from "next-auth";
+import { authOptions } from "../api/auth/[...nextauth]/route";
+import { redirect } from "next/navigation";
 
-const SignInView = () => {
+const SignInView = async() => {
+
+  // const session = await getServerSession(authOptions)
+
+  // if (session) {
+  //   redirect("/home")}
+
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
